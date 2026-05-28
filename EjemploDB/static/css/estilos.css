@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* 1. Encabezado siempre arriba */
+.header {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #16a085;
+}
+
+/* 2. El contenedor que hace la magia */
+.main-wrapper {
+    display: flex; /* Esto pone el menú y el contenido al lado */
+    min-height: calc(100vh - 80px); /* Restamos la altura aprox del header */
+}
+
+/* 3. Menú Lateral con ancho fijo */
+.sidebar {
+    width: 260px; 
+    background-color: #16213e;
+    color: white;
+    padding: 30px 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    color: #95a5a6;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #0f3460;
+    color: #1abc9c;
+}
+
+/* 4. Área Principal  */
+.main-content {
+    flex: 1; /* Esto hace que tome todo el espacio restante */
+    padding: 40px;
+    background-color: #f0f2f5;
+}
+
+/* 5. Estilo del Botón  */
+.btn {
+    display: inline-block;
+    background-color: #e94560;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+/* Estética extra para el contenido */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95rem;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden; /* Para que las esquinas se vean redondeadas */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.tabla thead {
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+.tabla th, tabla td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Efecto de filas alternas */
+.tabla tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efecto al pasar el mouse por la fila */
+.tabla tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.2s;
+}
+
+/* Estilo específico para la columna del usuario */
+.user-cell {
+    font-weight: bold;
+    color: #16a085;
+    width: 20%;
+}
